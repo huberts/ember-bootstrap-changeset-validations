@@ -17,7 +17,6 @@ export default class BsFormElementWithChangesetValidationsSupport extends BsForm
   // see https://www.ember-bootstrap.com/api/classes/Components.FormElement.html#property_errors
   //
   // If the if the property is valid but no validation is present `model.error.[this.property] could also be undefined.
-  @dependentKeyCompat
   get errors() {
     let errors = get(this, `model.error.${this.property}.validation`);
 
